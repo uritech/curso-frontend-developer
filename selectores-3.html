@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: salmon;
+        }
+        /*Un pseudoelemento nos permite modificar la primera letra de un parrafo por ejemplo
+        o colocar un emoji antes de cada inicio de parrafo*/
+        
+        p::first-letter {
+            color: teal;
+        }
+
+        p::before {
+            content: "🚀";
+        }
+        p::after {
+            content:"🌙"
+        }
+        /* Esta es una pseudoclase que nos permite modificar
+            de acuerdo a una accion hover es cuando pasamos el mouser por encima */
+        p:hover {
+            color: skyblue;
+        }
+        /*nth child nos permite seleccionar solo un hijo del bloque en este caso el segundo es una pseudoclase*/
+        div p:nth-child(2){
+            color: green; 
+        }
+        ::placeholder {
+            color:red;
+        }
+
+    </style>
+</head>
+
+<!-- nth child nos permite seleccionar solo un hijo del bloque en este caso el  -->
+<body>
+    <p>Hola</p>
+    <div>
+        <p>Platzi</p>
+        <p>Master</p>
+        <p>Lo mejor</p>
+    </div>
+    <input type="text" placeholder="name">
+</body>
+</html>
